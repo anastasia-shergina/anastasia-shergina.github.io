@@ -1,0 +1,135 @@
+header {
+background-color:#0624FF;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.picture1 {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 25%;
+    max-width: 300px;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+
+}
+
+.picture2 {
+    z-index:999;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom:-185px; 
+    width: 50%;
+    max-width: 600px;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+
+}
+
+.light_leaves {
+  transform-origin: right bottom;
+  animation: slide 1.5s ease-in-out 1.5s alternate infinite;
+}
+
+@keyframes slide {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+.leaves_dark {
+    animation: second 1.7s ease-in-out 1s alternate infinite;
+}
+
+@keyframes second {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.leaf_one {
+  transform-origin: left top;
+  animation: one 1.5s ease-in-out 1s alternate infinite;
+
+}
+
+@keyframes one {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.light_two {
+  transform-origin: left bottom;
+  animation: two 1.3s ease-in-out 1s alternate infinite;
+}
+
+@keyframes two {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: rotate(-1.7deg);
+  }
+}
+
+.leaf_three {
+  animation: third 1.7s ease-in-out 1s alternate infinite
+}
+
+@keyframes third {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: scale(0.99);
+  }
+}
+
+.line {
+  transform-origin: left bottom;
+  animation: line 1s ease-in-out 1s alternate infinite;
+}
+
+@keyframes line {
+  0% { 
+    transform: none;
+   } 
+
+  100% {
+    transform: rotate(-0.7deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .box h1 {
+        font-size: 2.7rem;
+    }
+
+    .box h2 {
+        font-size: 1rem;
+    }
+
+    .picture2 {
+    margin-bottom:-65px; 
+    }
+}

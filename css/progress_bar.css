@@ -1,0 +1,160 @@
+.statistics {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box1 {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.percent {
+    position: relative;
+    width: 160px;
+}
+
+.percent svg {
+/*    position: relative;*/
+    width: 100%;
+    display:block;
+    
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.circ1 circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #4b6bfc;
+}
+
+.circ1 circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: #bce0f7;
+}
+
+.anim1 circle:nth-child(2) {
+    animation: animate-circle 2s ease-in-out;
+}
+
+.circ2 circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #4b6bfc;
+}
+
+.circ2 circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke: #bce0f7;
+}
+
+.anim2 circle:nth-child(2) {
+    animation: animate-circle 2s ease-in-out;
+}
+
+.circ3 circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #4b6bfc;
+}
+
+.circ3 circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 9) / 100);
+    stroke: #bce0f7;
+}
+
+.anim3 circle:nth-child(2) {
+    animation: animate-circle 2s ease-in-out;
+}
+
+
+.counter {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+#num3 {
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+}
+
+.number {
+    font-family: 'Brygada 1918';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(80px) translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 800 40px system-ui;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.number span {
+    font-family: 'Brygada 1918';
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.facts {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.number::after {
+    font-family: 'Brygada 1918';
+    color: #fff;
+    font-size: 3rem;
+}
+
+.box1 .text {
+    padding: 10px 0 0;
+    color: #999;
+
+}
+
+@keyframes animate-circle {
+    0% {
+        stroke-dashoffset: 440;
+    }
+}
+
+@media screen and (max-width:680px) {
+
+    .box1 {
+        width: 100%;
+    }
+
+    .percent {
+        width: 109px;
+    }
+
+    .number {
+      transform: translateY(80px) translateY(-110%);  
+    }
+
+    .facts {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .number span {
+        font-size: 2rem;
+    }
+}
+

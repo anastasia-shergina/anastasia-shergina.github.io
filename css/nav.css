@@ -1,0 +1,126 @@
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 9995;
+}
+
+
+.menu { 
+    background-color: #5166FF;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 8px 20px;
+    transition: all 300ms ease;
+    margin-right: 20px;
+}
+
+nav a {
+    display: block;
+    cursor: pointer;
+}
+
+nav .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.navigation ul {
+    display: flex;
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    list-style: none;
+}
+
+.navigation li a {
+    font-weight: normal;
+    color: #BCE0F7;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navigation button {
+    background: none;
+    border: none;
+    outline: none;
+    display: none; 
+}
+
+.navigation a:hover {
+    color: #0624FF;
+    background-color: #fff;
+    transition: all 400ms ease;
+}
+
+nav.topfixed {
+    background-color: #3850FF;
+    transition: all .35s cubic-bezier(.15,.2,.2,.95);
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 992px) {
+
+.menu {
+    margin-right: 5px;
+}
+
+nav {
+    position: absolute;
+
+}
+
+}
+    
+   /* nav .navbar {
+        align-items: center;
+    }
+    
+    .navigation button {
+        position: relative;
+        display: block;
+        margin: 0;
+        z-index: 9999;
+    }
+    
+    .navigation ul {
+        background-color: rgba(10,10,10,.8);
+        position: absolute;
+        padding: 100px 30px 30px 20px;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        min-width: 50%;
+        min-height: 100vh;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        opacity:0;
+        transition-property: transform;
+        transition-duration: .35s;
+        transition-delay: .2s;
+        transition-timing-function: ease;
+        z-index: 9998;
+    }
+    
+    .navigation.open ul {
+        transform: translateX(0);
+        opacity:1;
+    }
+    
+    .navigation.open .overlay {
+        background-color: rgba(10,10,10, .3);
+        display: block;
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        min-height: 100vh;
+        z-index: 99;
+    }
+}
+*/
